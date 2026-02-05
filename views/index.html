@@ -4,11 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="style.css">-->
-    <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/desing.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/9c14a50597.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+
+<header class="header-top">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center py-3">
+            <h1 class="h4 mb-0"><i class="fas fa-file-alt me-2"></i>Generador de CV</h1>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+</header>
 
 <body>
     <form id="Form-cv">
@@ -63,235 +80,238 @@
                             <span id="linkedin-error" class="error-message text-danger"></span>
                         </div>
                     </div>
-    </div>
-
-    </div>
-    </div>
-
-    <!--Los skills-->
-    <div class="container mt-5">
-        <div class="card">
-            <div class="card-header bg-info text-white">
-                <h4 class="text-center">SKILLS </h4>
-            </div>
-
-            <div class="card-body">
-
-                <div id="skillsConteo">
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label>Skills</label>
-                            <input type="text" class="form-control skillsName" placeholder="Ej. Desarrollo web">
-                        </div>
-                        <div class="col-md-4">
-                            <label>Puntuacion</label>
-                            <select class="form-select skillsPuntuacion">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                </div><br>
-                <br>
-
-                <button type="button" class="btn btn-info text-light" onclick="Addskills()"> + Agregar skills</button>
-            </div>
-        </div>
-    </div>
-    <br>
-
-    <!--Nombre del software-->
-    <div class="container mt-5">
-        <div class="card">
-            <div class="card-header bg-info text-white">
-                <h4 class="text-center">SOFTWARE </h4>
-            </div>
-            <div class="card-body">
-
-                <div id="softwareConteo">
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label>Nombre del software</label>
-                            <input type="text" class="form-control softwareName" placeholder="Ej. Adobe">
-                        </div>
-                        <div class="col-md-4">
-                            <label>Puntuacion</label>
-                            <select class="form-control softwareSelect">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-
-                </div><br>
-                <button type="button" class="btn btn-info text-light" onclick="Addsoftware()"> + Agregar
-                    software</button>
-            </div>
-        </div>
-    </div>
-
-    <!--Idiomas-->
-    <div class="container mt-5">
-        <div class="card">
-            <div class="card-header bg-info text-white">
-                <h4 class="text-center">IDIOMAS</h4>
-            </div>
-            <div class="card-body">
-
-                <div id="idiomasConteo">
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label>Nombre del idioma</label>
-                            <input type="text" class="form-control idiomaName" placeholder="Ej. Ingles">
-                        </div>
-                        <div class="col-md-4">
-                            <label>Puntuacion</label>
-                            <select class="form-control idiomaSelect">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </div>
-                </div><br>
-
-                <button type="button" class="btn btn-info text-light" onclick="AddIdioma()"> + Agregar idioma</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-5">
-        <div class="card">
-            <div class="card-header bg-info text-white">
-                <h4 class="text-center">RESUMEN PROFESIONAL </h4>
-            </div>
-            <div class="card-body">
-                <div class="mb-3">
-                    <label for="resumen" class="form-label">Describe tu experiencia profesional</label>
-                    <textarea class="form-control" id="resumen" rows="4"></textarea>
                 </div>
+
             </div>
         </div>
 
-        <!--Experiencia laboral-->
+        <!--Los skills-->
         <div class="container mt-5">
             <div class="card">
                 <div class="card-header bg-info text-white">
-                    <h4 class="text-center">EXPERIENCIA LABORAL </h4>
+                    <h4 class="text-center">SKILLS </h4>
                 </div>
+
                 <div class="card-body">
-                    <div id="experienciaConteo">
+
+                    <div id="skillsConteo">
                         <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label>Skills</label>
+                                <input type="text" class="form-control skillsName" placeholder="Ej. Desarrollo web">
+                            </div>
                             <div class="col-md-4">
-                                <label>Empresa</label><br>
-                                <input type="text" class="form-control empresaName" placeholder="Ej. Microsoft"><br>
-                                <br>
-                            </div>
-                            <div class="col-md-3">
-                                <label>Fecha de incio</label><br>
-                                <input type="date" class="form-control fechaInicio"><br>
-                            </div>
-                            <div class="col-md-3">
-                                <label>Fecha de culminacion</label><br>
-                                <input type="date" class="form-control fechaCulminacion"><br>
-                                <br>
+                                <label>Puntuacion</label>
+                                <select class="form-select skillsPuntuacion">
+                                    <option value="1">1 - Básico</option>
+                                    <option value="2">2 - Elemental</option>
+                                    <option value="3">3 - Intermedio</option>
+                                    <option value="4">4 - Avanzado</option>
+                                    <option value="5">5 - Experto</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
-                    <button type="button" class="btn btn-info text-light" onclick="Addexperiencia()">+Agregar
-                        experiencia</button>
+                    </div><br>
+                    <br>
+
+                    <button type="button" class="btn btn-info text-light" onclick="Addskills()"> + Agregar
+                        skills</button>
                 </div>
             </div>
         </div>
+        <br>
 
-        <!--Educacion-->
+        <!--Nombre del software-->
         <div class="container mt-5">
             <div class="card">
                 <div class="card-header bg-info text-white">
-                    <h4 class="text-center">EDUCACION </h4>
+                    <h4 class="text-center">SOFTWARE </h4>
                 </div>
                 <div class="card-body">
-                    <div id="educacionConteo">
-                        <div class="row mn-3">
+
+                    <div id="softwareConteo">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label>Nombre del software</label>
+                                <input type="text" class="form-control softwareName" placeholder="Ej. Adobe">
+                            </div>
                             <div class="col-md-4">
-                                <label>Institucion academica</label><br>
-                                <input type="text" class="form-control institucion" name="institucion"
-                                    placeholder="Ej: Instito tecnologico de las americas"><br>
-                                <br>
-                            </div>
-                            <div class="col-md-3">
-                                <label>Fecha de incio</label><br>
-                                <input type="date" class="form-control iniciodeeducacion"><br>
-                                <br>
-                            </div>
-                            <div class="col-md-3">
-                                <label>Fecha de finalizacion</label><br>
-                                <input type="date" class="form-control finalizacioneducacion" name="[]"><br>
-                                <br>
+                                <label>Puntuacion</label>
+                                <select class="form-control softwareSelect">
+                                    <option value="1">1 - Básico</option>
+                                    <option value="2">2 - Elemental</option>
+                                    <option value="3">3 - Intermedio</option>
+                                    <option value="4">4 - Avanzado</option>
+                                    <option value="5">5 - Experto</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
-                    <button type="button" class="btn btn-info text-light" onclick="AddEducacion()">+Agregar
-                        educacion</button>
+
+                    </div><br>
+                    <button type="button" class="btn btn-info text-light" onclick="Addsoftware()"> + Agregar
+                        software</button>
                 </div>
             </div>
         </div>
 
-
-        <!--Certificaciones-->
+        <!--Idiomas-->
         <div class="container mt-5">
             <div class="card">
                 <div class="card-header bg-info text-white">
-                    <h4 class="text-center">CERTIFICACIONES</h4>
+                    <h4 class="text-center">IDIOMAS</h4>
                 </div>
                 <div class="card-body">
 
-                    <div id="CertificacionesConteo">
-                        <div class="row mn-3">
-                            <div class="col-mb-4">
-                                <label>Nombre de la certificacion</label><br>
-
-                                <input type="text" class="form-control nombreCertificacion"
-                                    placeholder="Ej: Certificacion de seguridad"><br>
-                                <br>
+                    <div id="idiomasConteo">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label>Nombre del idioma</label>
+                                <input type="text" class="form-control idiomaName" placeholder="Ej. Ingles">
                             </div>
-                            <div class="col-md-3">
-                                <label>Fecha de obtencion</label><br>
-
-                                <input type="date" class="form-control fechaObtencionCertificacion"><br>
-                                <br>
-                            </div>
-                            <div class="col-md-3">
-                                <label>Fecha de expiracion</label><br>
-                                <input type="date" class="form-control fechaExpiracion"><br>
-                                <br>
+                            <div class="col-md-4">
+                                <label>Puntuacion</label>
+                                <select class="form-control idiomaSelect">
+                                    <option value="1">1 - Básico</option>
+                                    <option value="2">2 - Elemental</option>
+                                    <option value="3">3 - Intermedio</option>
+                                    <option value="4">4 - Avanzado</option>
+                                    <option value="5">5 - Experto</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
-                    <button type="button" class="btn btn-info text-light" onclick="addCertificacion()">+Agregar
-                        certificaciones</button>
+                    </div><br>
+
+                    <button type="button" class="btn btn-info text-light" onclick="AddIdioma()"> + Agregar
+                        idioma</button>
                 </div>
             </div>
         </div>
 
-        <div class="contariner mt-4">
-            <button type="button" class="btn btn-primary" onclick="ValidaryGenerar()">Generar
-                CV</button>
-        </div>
-        </form>
-        <div class="container mt-4" id="cvContainer"></div>
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h4 class="text-center">RESUMEN PROFESIONAL </h4>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="resumen" class="form-label">Describe tu experiencia profesional</label>
+                        <textarea class="form-control" id="resumen" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
 
-        <!--Imprimir CV-->
-        <script src="Javaecri/lib/bootstrap/bootstrap.min.js"></script>
-        <script src="Javaecri/app.js"></script>
+            <!--Experiencia laboral-->
+            <div class="container mt-5">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h4 class="text-center">EXPERIENCIA LABORAL </h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="experienciaConteo">
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label>Empresa</label><br>
+                                    <input type="text" class="form-control empresaName" placeholder="Ej. Microsoft"><br>
+                                    <br>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Fecha de incio</label><br>
+                                    <input type="date" class="form-control fechaInicio"><br>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Fecha de culminacion</label><br>
+                                    <input type="date" class="form-control fechaCulminacion"><br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-info text-light" onclick="Addexperiencia()">+Agregar
+                            experiencia</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Educacion-->
+            <div class="container mt-5">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h4 class="text-center">EDUCACION </h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="educacionConteo">
+                            <div class="row mn-3">
+                                <div class="col-md-4">
+                                    <label>Institucion academica</label><br>
+                                    <input type="text" class="form-control institucion" name="institucion"
+                                        placeholder="Ej: Instito tecnologico de las americas"><br>
+                                    <br>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Fecha de incio</label><br>
+                                    <input type="date" class="form-control iniciodeeducacion"><br>
+                                    <br>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Fecha de finalizacion</label><br>
+                                    <input type="date" class="form-control finalizacioneducacion" name="[]"><br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-info text-light" onclick="AddEducacion()">+Agregar
+                            educacion</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Certificaciones-->
+            <div class="container mt-5">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h4 class="text-center">CERTIFICACIONES</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <div id="CertificacionesConteo">
+                            <div class="row mn-3">
+                                <div class="col-mb-4">
+                                    <label>Nombre de la certificacion</label><br>
+
+                                    <input type="text" class="form-control nombreCertificacion"
+                                        placeholder="Ej: Certificacion de seguridad"><br>
+                                    <br>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Fecha de obtencion</label><br>
+
+                                    <input type="date" class="form-control fechaObtencionCertificacion"><br>
+                                    <br>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Fecha de expiracion</label><br>
+                                    <input type="date" class="form-control fechaExpiracion"><br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-info text-light" onclick="addCertificacion()">+Agregar
+                            certificaciones</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contariner mt-4">
+                <button type="button" class="btn btn-primary" onclick="ValidaryGenerar()">Generar
+                    CV</button>
+            </div>
+    </form>
+    <div class="container mt-4" id="cvContainer"></div>
+
+    <!--Imprimir CV-->
+    <script src="../js/lib/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/theme.js"></script>
 </body>
 
 </html>
